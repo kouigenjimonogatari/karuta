@@ -1,0 +1,1 @@
+export GOOGLE_APPLICATION_CREDENTIALS="strategic-ivy-210006-7e9d95f548c4.json"
