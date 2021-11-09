@@ -22,12 +22,14 @@ for index, row in enumerate(df.itertuples()):
 
     text = row[7]
 
+    index2 += 1
+
     if pd.isnull(text):
         continue
 
     text = text.replace(" ", "")
     
-    index2 += 1
+    
 
     # 画像サイズ，背景色，フォントの色を設定
     canvasSize    = (600, 800)
