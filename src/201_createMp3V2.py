@@ -50,6 +50,8 @@ df = pd.read_csv(inputPath)
 
 index2 = 0
 
+skipFlag = False
+
 for index, row in enumerate(df.itertuples()):
     index = row[0]
 
@@ -58,14 +60,14 @@ for index, row in enumerate(df.itertuples()):
 
     text = row[3]
 
+    index2 += 1
+
     if pd.isnull(text):
         continue
 
-    index2 += 1
-
     outputPath = "../docs/audio/{}.mp3".format(str(index2).zfill(3))
 
-    if os.path.exists(outputPath):
+    if os.path.exists(outputPath) and skipFlag:
         continue
 
     spl = text.split(" ")

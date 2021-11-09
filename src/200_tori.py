@@ -20,7 +20,7 @@ for index, row in enumerate(df.itertuples()):
     if index < 15:
         continue
 
-    text = row[6]
+    text = row[7]
 
     if pd.isnull(text):
         continue
